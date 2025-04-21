@@ -450,3 +450,6 @@ warn_on_root = 1
 #    Then, invoke the command line with the "demo" profile:
 #
 #buildozer --profile demo android debug
+p4a.branch = master
+# Author: ARIA Dev Team
+# Copyright (c) 2025 ARIA Chat
