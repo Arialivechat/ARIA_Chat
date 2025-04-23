@@ -123,7 +123,7 @@ fullscreen = 0
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 #android.sdk_path =
-
+android.build_tools_version = 34.0.0
 # (str) ANT directory (if empty, it will be automatically downloaded.)
 #android.ant_path =
 
@@ -453,3 +453,4 @@ warn_on_root = 1
 p4a.branch = master
 # Author: ARIA Dev Team
 # Copyright (c) 2025 ARIA Chat
+icon.filename = aria_icon.png
