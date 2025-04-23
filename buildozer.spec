@@ -42,7 +42,7 @@ requirements = python3,kivy,socketio,requests,arabic_reshaper,python-bidi
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
-android.permissions = INTERNET, CAMERA, ACCESS_FINE_LOCATION
+android.permissions = INTERNET,ACCESS_NETWORK_STATE,CAMERA,ACCESS_FINE_LOCATION
 # (str) Presplash of the application
 #presplash.filename = %(source.dir)s/data/presplash.png
 
@@ -109,8 +109,7 @@ fullscreen = 0
 # (int) Android SDK version to use
 #android.sdk = 20
 
-# (str) Android NDK version to use
-#android.ndk = 23b
+# (str) Android NDK version to use#android.ndk = 23b
 
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
 #android.ndk_api = 21
