@@ -1,18 +1,21 @@
 workflows:
-  build:
-    name: Build APK
-    max_build_duration: 60
+  android-workflow:
+    name: Build Android APK
+    max_build_duration: 15
     environment:
       flutter: stable
+      vars:
+        PACKAGE_NAME: "com.example.arialivechat"
     scripts:
-      - name: Install dependencies
+      - name: Get dependencies
         script: |
-          apt-get update
-          apt-get install -y python3 python3-pip
-          pip install buildozer
-          # اگر نیاز به نصب پکیج دیگه‌ای داشتی، اینجا می‌تونی اضافه کنی
+          flutter pub get
       - name: Build APK
         script: |
-          buildozer -v android debug
+          flutter build apk --release
     artifacts:
-      - buildozer/android/platform/build/dists/*.apk
+      - build/app/outputs/flutter-apk/app-release.apk
+    publishing:
+      email:
+        recipients:
+          - arialivechat@gmail.com
