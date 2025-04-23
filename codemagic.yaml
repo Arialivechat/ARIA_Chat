@@ -1,0 +1,18 @@
+workflows:
+  build:
+    name: Build APK
+    max_build_duration: 60
+    environment:
+      flutter: stable
+    scripts:
+      - name: Install dependencies
+        script: |
+          apt-get update
+          apt-get install -y python3 python3-pip
+          pip install buildozer
+          # اگر نیاز به نصب پکیج دیگه‌ای داشتی، اینجا می‌تونی اضافه کنی
+      - name: Build APK
+        script: |
+          buildozer -v android debug
+    artifacts:
+      - buildozer/android/platform/build/dists/*.apk

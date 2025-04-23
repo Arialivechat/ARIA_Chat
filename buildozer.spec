@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,socketio,request
+requirements = python3,kivy,socketio,requests,arabic_reshaper,python-bidi
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -123,7 +123,7 @@ fullscreen = 0
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 #android.sdk_path =
-
+android.build_tools_version = 34.0.0
 # (str) ANT directory (if empty, it will be automatically downloaded.)
 #android.ant_path =
 
@@ -450,3 +450,7 @@ warn_on_root = 1
 #    Then, invoke the command line with the "demo" profile:
 #
 #buildozer --profile demo android debug
+p4a.branch = master
+# Author: ARIA Dev Team
+# Copyright (c) 2025 ARIA Chat
+icon.filename = aria_icon.png
